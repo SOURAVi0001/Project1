@@ -1,0 +1,101 @@
+/* Footer Main Container */
+.footer {
+    background: linear-gradient(90deg, #2a5298, #cf2929);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 5px solid #ffcc00;
+    font-family: "Arial", sans-serif;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Logo Section */
+  .logoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Links Section */
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .links a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .links a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  
+  /* Social Media Icons */
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 20px;
+    }
+    .links a {
+      font-size: 14px;
+    }
+    .icon {
+      font-size: 20px;
+    }
+  }

@@ -1,0 +1,169 @@
+/* Container */
+.container {
+  flex: 1;
+  min-width: 350px;
+  max-width: 850px;
+  padding: 20px;
+  margin:50px;
+  background: linear-gradient(45deg, #cf2929, #2a5298, #cf2929);
+  background-size: 200% 200%;
+  animation: navbarAnimation 6s infinite alternate ease-in-out;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  font-size: 24px;
+  color: yellow;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.teamInfo {
+  display: flex;
+  align-items: center;
+}
+
+.teamLogo {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.teamName {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.scoreDisplay {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.overs {
+  font-size: 16px;
+  color: lightgray;
+}
+
+/* Player Stats */
+.playerStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.batsmanBox, .bowlerBox {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Batsman Table */
+.batsmanTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.batsmanTable th, .batsmanTable td {
+  padding: 6px;
+  border-bottom: 1px solid white;
+}
+
+/* Ball Representation */
+.currentOver {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Balls UI */
+.ball {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.ball:hover {
+  transform: scale(1.2);
+}
+
+/* Different Ball Styles */
+.run { background: green; }
+.wicket { background: red; animation: pulse 1s infinite; }
+.wide { background: purple; animation: flash 0.8s infinite; }
+.noBall { background: orange; animation: bounce 0.6s infinite; }
+
+/* Animations */
+@keyframes pulse { 0% { box-shadow: 0 0 10px red; } 50% { box-shadow: 0 0 20px red; } 100% { box-shadow: 0 0 10px red; } }
+@keyframes flash { 0% { opacity: 1; } 100% { opacity: 0.5; } }
+@keyframes bounce { 0% { transform: translateY(0px); } 100% { transform: translateY(-5px); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .playerStats { flex-direction: column; align-items: center; }
+  .ball { width: 28px; height: 28px; font-size: 12px; }
+}
+/* Bowler Section */
+.bowlerBox {
+  flex: 1;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Bowler Name */
+.bowlerName {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: yellow;
+}
+
+/* Bowler Stats */
+.bowlerStats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Individual Bowler Stat Box */
+.bowlerStatBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Bowler Stat Icons */
+.bowlerStatIcon {
+  font-size: 18px;
+}

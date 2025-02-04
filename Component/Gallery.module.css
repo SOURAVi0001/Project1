@@ -1,0 +1,27 @@
+.galleryContainer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.imageCard {
+  cursor: pointer;
+}
+
+.gridImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+}
